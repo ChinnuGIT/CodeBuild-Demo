@@ -24,7 +24,7 @@ phases:
             - git config --global url."https://github.com/".insteadOf "git@github.com:"
             - git init
             - git remote add origin https://$GITHUBTOKEN@github.com/$GITHUBUSER/$PROJECTNAME.git
-            - git pull
+            - git fetch
             - git checkout -ft origin/$SOURCEBRANCH
             - echo update all submodues
             - git submodule init
