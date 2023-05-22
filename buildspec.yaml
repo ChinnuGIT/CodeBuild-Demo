@@ -24,7 +24,7 @@ phases:
             - git config --global url."https://github.com/".insteadOf "git@github.com:"
             - git init
             - git remote add origin https://$GITHUBTOKEN@github.com/$GITHUBUSER/$PROJECTNAME.git
-            - git fetch
+            - git pull
             - git checkout -ft origin/$SOURCEBRANCH
             - echo update all submodues
             - git submodule init
@@ -35,7 +35,7 @@ phases:
             - echo Verifying Taskcat installation...
             - taskcat -v
             - echo Configuring aws cli...
-            - aws configure set default.region us-west-2
+            - aws configure set default.region us-west-1
     build:
         commands:
             - echo Entered the build phase...
