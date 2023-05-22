@@ -25,7 +25,7 @@ phases:
             - git init
             - git remote add origin https://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@github.com/ChinnuGIT/CodeBuild-Demo.git
             - git fetch
-            - git checkout -b origin/$SOURCEBRANCH
+            - git checkout -ft origin/main
             - echo update all submodues
             - git submodule init
             - git submodule update --recursive
