@@ -23,7 +23,7 @@ phases:
             - echo Force git to use https:// instead of git://
             - git config --global url."https://github.com/".insteadOf "git@github.com:"
             - git init
-            - git remote add origin https://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@github.com/ChinnuGIT/$PROJECTNAME.git
+            - git remote add origin https://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@github.com/ChinnuGIT/CodeBuild-Demo.git
             - git fetch
             - git checkout -ft origin/$SOURCEBRANCH
             - echo update all submodues
