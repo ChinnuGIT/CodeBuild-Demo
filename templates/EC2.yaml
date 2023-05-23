@@ -47,7 +47,7 @@ Resources:
           cd /tomcat${tom_m_v}/bin
           sudo ./startup.sh
 
-      AvailabilityZone: us-east-1a
+      AvailabilityZone: us-east-1
       ImageId: ami-02396cdd13e9a1257
       InstanceType: t2.micro
       SubnetId: !Ref PrivateSubnetId
