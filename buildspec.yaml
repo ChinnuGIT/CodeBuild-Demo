@@ -38,6 +38,8 @@ phases:
     build:
         commands:
             - echo Entered the build phase...
+            - echo checking cfn-lint version
+            - cfn-lint --version
             - echo run linting...
             - cfn-lint templates/*
             - cfn-lint -i E3012 -- templates/*
