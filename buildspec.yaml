@@ -41,7 +41,7 @@ phases:
             - echo checking cfn-lint version
             - cfn-lint --version
             - echo run linting...
-            - cfn-lint --non-zero-exit-code none templates/*
+            - cfn-lint --non-zero-exit-code templates/*
             - |
               if $(grep -Fq "E" cfn_lint_output.log)
               then
