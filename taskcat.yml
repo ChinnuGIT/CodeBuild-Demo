@@ -4,7 +4,7 @@ project:
   - us-east-1
 tests:
   vpc-defaults:
-    template: ./EC2.yaml
+    template: ./templates/EC2.yaml
     regions:
     - us-east-1  
     parameters:
