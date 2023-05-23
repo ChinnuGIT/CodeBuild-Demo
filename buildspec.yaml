@@ -40,6 +40,8 @@ phases:
             - echo Entered the build phase...
             - echo run linting...
             - cfn-lint templates/*
+            - cfn-lint -i E3012 -- templates/*
+            - cfn-lint -x E3012:strict=false -t templates/*
             - cfn-lint templates/* > cfn_lint_output.log
             - |
               if $(grep -Fq "E" cfn_lint_output.log)
