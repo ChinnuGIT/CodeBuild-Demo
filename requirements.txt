@@ -5,7 +5,7 @@ backports.shutil-get-terminal-size==1.0.0
 boto3==1.14.9
 botocore==1.17.9
 certifi==2020.6.20
-cfn-lint==0.33.1
+cfn-lint==0.35.0
 chardet==3.0.4
 dataclasses-jsonschema==2.12.0
 decorator==4.4.2
