@@ -47,7 +47,7 @@ Resources:
           cd /tomcat${tom_m_v}/bin
           sudo ./startup.sh
 
-      AvailabilityZone: us-east-1
+      AvailabilityZone: us-east-1a
       ImageId: ami-02396cdd13e9a1257
       InstanceType: t2.micro
       SubnetId: !Ref PrivateSubnetId
@@ -60,8 +60,8 @@ Resources:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
           CidrIp:  0.0.0.0/0
 
   TomcatCustomTCPSecurityGroup:
@@ -71,8 +71,8 @@ Resources:
       GroupDescription: Enable tomcat access via port 8080
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '8080'
-          ToPort: '8080'
+          FromPort: 8080
+          ToPort: 8080
           CidrIp:  0.0.0.0/0
 
 
