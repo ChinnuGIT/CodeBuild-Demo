@@ -56,7 +56,7 @@ Resources:
   TomcatSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Metadata:
-    cfn_nag:
+     cfn_nag:
       rules_to_suppress:
         - id: W9
           reason: "This is a public facing ELB and ingress from the internet should be permitted."
@@ -74,7 +74,7 @@ Resources:
   TomcatCustomTCPSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Metadata:
-    cfn_nag:
+     cfn_nag:
       rules_to_suppress:
         - id: W9
           reason: "This is a public facing ELB and ingress from the internet should be permitted."
