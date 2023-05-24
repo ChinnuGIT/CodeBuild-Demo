@@ -42,6 +42,7 @@ phases:
             - cfn-lint --version
             - echo run linting...
             - cfn-lint templates/* --ignore-checks W
+            - cfn-lint templates/* --ignore-checks W > cfn_lint_output.log
             - |
               if $(grep -Fq "E" cfn_lint_output.log)
               then
