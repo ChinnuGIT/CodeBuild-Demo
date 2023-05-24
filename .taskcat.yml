@@ -3,7 +3,7 @@ project:
   regions:
   - us-east-1
 tests:
-  vpc-defaults:
+  sqs-test:
     template: ./templates/EC2.yaml
     regions:
     - us-east-1  
