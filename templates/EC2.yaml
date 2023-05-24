@@ -55,6 +55,13 @@ Resources:
 
   TomcatSecurityGroup:
     Type: AWS::EC2::SecurityGroup
+    Metadata:
+    cfn_nag:
+      rules_to_suppress:
+        - id: W9
+          reason: "This is a public facing ELB and ingress from the internet should be permitted."
+        - id: W2
+          reason: "This is a public facing ELB and ingress from the internet should be permitted."
     Properties:
       VpcId: !Ref VPCId
       GroupDescription: Enable SSH access via port 22
@@ -66,6 +73,13 @@ Resources:
 
   TomcatCustomTCPSecurityGroup:
     Type: AWS::EC2::SecurityGroup
+    Metadata:
+    cfn_nag:
+      rules_to_suppress:
+        - id: W9
+          reason: "This is a public facing ELB and ingress from the internet should be permitted."
+        - id: W2
+          reason: "This is a public facing ELB and ingress from the internet should be permitted."
     Properties:
       VpcId: !Ref VPCId
       GroupDescription: Enable tomcat access via port 8080
