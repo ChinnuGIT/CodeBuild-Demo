@@ -1,5 +1,5 @@
 project:
-  name: cfn-ci-cd
+  name: CodeBuild-Demo
   regions:
   - us-east-1
 tests:
