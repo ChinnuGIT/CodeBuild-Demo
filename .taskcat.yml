@@ -2,10 +2,14 @@ project:
   name: CodeBuild-Demo
   regions:
   - us-east-1
+  - us-west-1
+  - eu-west-1
 tests:
   sqs-test:
     template: ./templates/EC2.yaml
     regions:
-    - us-east-1  
+    - us-east-1
+    - us-west-1
+    - eu-west-1  
     parameters:
       NameOfService: "TaskCat demo"
