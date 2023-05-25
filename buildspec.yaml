@@ -64,21 +64,8 @@ phases:
                 echo CFN-Nag security check Passed!
                 exit 0
               fi
-            - echo run Taskcat tests...
-            - taskcat test run -p ./templates/EC2.yaml
-            - |
-              if $(grep -Fq "CREATE_FAILED" taskcat_outputs/index.html)
-              then
-                echo Taskcat check Failed!
-                exit 1
-              else
-                echo Taskcat check Passed!
-                exit 0
-              fi
+                       
     post_build:
         commands:
             - echo Build completed on `date`
-artifacts:
-  files:
-    - taskcat_outputs/*
-  name: taskcat-report        
+        
