@@ -33,6 +33,7 @@ phases:
             - echo Installing Taskcat using pip3...
             - pip3 install -r requirements.txt
             - echo Verifying Taskcat installation...
+            - taskcat -version
             - echo Configuring aws cli...
             - aws configure set default.region us-east-1
     build:
@@ -65,7 +66,7 @@ phases:
                 exit 0
               fi
             - echo run Taskcat tests...
-            - taskcat test run
+            - taskcat test run -p ./templates/EC2.yaml
             - |
               if $(grep -Fq "CREATE_COMPLETE" taskcat_outputs/index.html)
               then
