@@ -72,6 +72,8 @@ Resources:
           CidrIp:  0.0.0.0/0
       SecurityGroupEgress:
         - IpProtocol: tcp
+          FromPort: 1
+          ToPort: 1
           CidrIp: 127.0.0.1/32   
 
   TomcatCustomTCPSecurityGroup:
@@ -93,6 +95,8 @@ Resources:
           CidrIp:  0.0.0.0/0
       SecurityGroupEgress:
         - IpProtocol: tcp
+          FromPort: 1
+          ToPort: 1
           CidrIp: 127.0.0.1/32    
 
 
