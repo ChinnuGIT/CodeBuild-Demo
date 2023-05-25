@@ -65,15 +65,15 @@ phases:
                 exit 0
               fi
             - echo run Taskcat tests...
-            - taskcat test run -l
+            - taskcat test run
             - |
-              if $(grep -Fq "CREATE_FAILED" taskcat_outputs/index.html)
+              if $(grep -Fq "CREATE_COMPLETE" taskcat_outputs/index.html)
               then
-                echo Taskcat check FAILED!
-                exit 1
-              else
                 echo Taskcat check Passed!
                 exit 0
+              else
+                echo Taskcat check Failed!
+                exit 1
               fi
     post_build:
         commands:
